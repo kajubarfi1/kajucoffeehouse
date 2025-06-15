@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kajubarfi's coffeehouse.</title>
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/80230fe60d.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1>
+    </h1>
+    <!--NAVBAR-->
+    <nav>
+
+        <div class="left">
+            <a href="/">kaju's coffeehouse  </a>
+        </div>
+
+        <div class="right">
+
+            <a href="www.linkedin.com/in/lehanar" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-headphones"></i>
+                <span>Linkedin</span>
+            </a>
+
+
+            <a href="http://github.com" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-cat"></i>
+                <span>Github</span>
+            </a>
+
+        
+
+            <a href="mailto:lehanar57@tamu.edu" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+            </a>
+
+
+        </div>
+
+
+    </nav>
+
+    <!--MAIN-->
+    <main>
+        <!--SECTION 1: Hero-->
+        <section class="hero-section">
+            <div class="text">
+                
+                <h2>kajubarfi's coffeehouse. <i class="fa-solid fa-mug-hot" style="color: #373740;"></i></h2>
+                <p>howdy! i'm lehana, a senior electrical engineering, mathematics, and technical sales student at texas a&m university.</p>  <br><br><br>
+
+        </section>
+
+        <!----SECTION 2: Widgets-->
+        <section id="widgets" class = "widget-section">
+
+            <div class = "widgetcardwrap">
+
+                <div class = "spotify">
+                    <iframe style="border-radius:12px" 
+                    src="https://open.spotify.com/embed/playlist/1P4n94RBuVfgMTNcsgHQ7r?utm_source=generator"
+                    frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; 
+                    encrypted-media; fullscreen; picture-in-picture" loading="lazy" 
+                     ></iframe>
+                </div>
+
+                <!-- MODAL GAME -->
+                 <div class = "modal-card">
+                    <button class="modal-button" data-modal-target="#modal">kaju's coffeehouse (WIP)!</button>
+                 </div>
+
+
+                <div class="modal" id="modal">
+
+                    <div class="modal-header">
+                        <div class="title">Modal</div>
+                        <button data-close-button class="close-button">&times;</button>
+                    </div>
+
+                    <div id="start-menu" class="start-menu">
+                        <p>welcome to kajubarfi's coffeehouse!</p> <br>
+                        <p>(this feature is a work in progress~)</p>
+                        <button id="start-button">Start Game</button>
+                    </div>
+
+
+                    <!-- Screen 1: Choose size -->
+                    <div id="screen-size" class="game-screen">
+                    <p id="text-size">What size drink would you like?</p>
+                    <div class="game-buttons">
+                        <button onclick="changeGameContent('small')">Small</button>
+                        <button onclick="changeGameContent('medium')">Medium</button>
+                        <button onclick="changeGameContent('large')">Large</button>
+                    </div>
+                    </div>
+
+                    <!-- Screen 2: Choose hot or iced -->
+                    <div id="screen-temp" class="game-screen" style="display: none;">
+                    <p id="text-temp">Hot or iced?</p>
+                    <div id="buttons-temp" class="game-buttons"></div>
+                    </div>
+
+                    <!-- Screen 3: Choose milk type -->
+                    <div id="screen-milk" class="game-screen" style="display: none;">
+                    <p id="text-milk">What kind of milk would you like?</p>
+                    <div id="buttons-milk" class="game-buttons"></div>
+                    </div>
+
+
+                </div>
+
+                <div id="overlay"></div>
+
+                <div class="updateslist">
+                    <h2>my coffee recs!</h2>
+
+                    <div class = "updates">
+                        <a href="https://www.cafehwasan.com/" target="_blank">
+                            <p>cafe hwasan</p>
+                        </a>
+                    </div>
+
+                    <div class = "updates">
+                        <a href="https://summermooncoffee.com/" target="_blank">
+                            <p>summer moon coffee</p>
+                        </a>
+                    </div>
+
+
+                    <div class = "updates">
+                        <a href="https://www.lemmacoffeeco.com/" target="_blank">
+                            <p>lemma coffee co.</p>
+                        </a>
+                    </div>
+
+                    <div class = "updates">
+                        <a href="https://www.7thdaycoffee.com/" target="_blank">
+                            <p>7th day coffee</p>
+                        </a>
+                    </div>
+
+                    <div class = "updates">
+                        <a href="https://www.1418coffee.com/" target="_blank">
+                            <p>1418 coffee</p>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+            
+        </section>
+
+        <!--SECTION 2: Skills-->
+  
+        <section id="skills" class="skills-section">
+            <div class="text">
+                <h2>learn more about my life here!</h2>
+            </div>
+    
+            <div class = "card-wrapper">
+    
+                <a href="about.html" style="text-decoration: none; color: inherit;">
+                    <div class="card">
+                        <div class = "container">
+                            <img src = "images/plantdoodle.png" style = width:100%>
+                            
+                            <h4><b>about me!</b></h4>
+                            
+                        </div>
+                        
+                    
+                    </div>
+                </a>
+    
+                <div class="card">
+                    <div class = "container">
+                        <img src = "images/plantdoodle.png" style = width:100%>
+                        <h4><b>experience & involvement!</b></h4>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class = "container">
+                        <img src = "images/plantdoodle.png" style = width:100%>
+                        <h4><b>my resume + career goals!</b></h4>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class = "container">
+                        <img src = "images/plantdoodle.png" style = width:100%>
+                        <h4><b>just for fun!</b></h4>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--SECTION 3: Testimony-->
+        <section id ="testimony" ></section>
+
+        <!--SECTION 4: Contact-->
+        <section id = "contact"></section>
+
+    </main>
+</body>
+</html>

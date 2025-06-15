@@ -1,0 +1,526 @@
+:root {
+    --text-color: #BDA99F;
+    --link-color: #006666;
+    --background-color: #EEEAE3;
+    --background: linear-gradient(90deg, rgba(238, 234, 227, 1) 13%, rgba(189, 169, 159, 1) 82%);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+body{
+    font-family: "Mulish";
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+
+
+a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/*NAVBAR*/
+nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 80px;
+}
+
+nav .left a{
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav .right a{
+    color: var(--text-color);
+    margin: 0 10px;
+}
+
+
+nav .right a span{
+    margin-left: 5px;
+}
+
+/*SECTION 1: HERO */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    gap: 40px;
+
+}
+
+.hero-section .text h2{
+    font-family: 'The Girl Next Door', cursive;
+    color: #373740
+}
+
+.hero-section .text {
+    flex: 5;
+}
+
+.hero-section .text h2 {
+    font-size: 60px;
+}
+
+.hero-section .text p {
+    font-size: 20px;
+}
+
+.hero-section .text .links {
+    margin-top: 25px;
+}
+
+.hero-section .text .links a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+.hero-section .headshot {
+    flex: 2;
+    display: flex;
+    justify-content: right;
+    margin-bottom: 100px;
+}
+
+.hero-section .headshot img {
+    border-radius: 10%;
+    width: 400px;
+}
+
+/*SECTION 2: Widgets*/
+.widget-section{
+    padding: 0 30px;
+    font-family: "Mulish", sans-serif;
+    margin-bottom: 100px;
+}
+
+.widget-section h2 {
+    font-family: "Mulish", sans-serif;
+    text-align: center;
+    font-size: 35px;
+}
+
+.widgetcardwrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+
+}
+
+
+.widgetcardwrap .spotify iframe {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
+    border-radius: 10%;
+    transition: 0.3s;
+    width: 500px;
+    height: 500px;
+    
+    align-items: center;
+  }
+
+.widgetcardwrap .spotify iframe:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.8);
+}
+
+.widgetcardwrap .modal-button {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
+    border-radius: 2.4%; /* match updateslist's radius */
+    transition: 0.3s;
+    width: 500px;
+    height: 500px;
+    background-color: #00666628;
+    color: #373740;
+    font-family: "Mulish", sans-serif;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    text-align: center;
+    padding: 20px;
+}
+
+.modal-button:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.8);
+}
+
+.widgetcardwrap .updateslist {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
+    border-radius: 2.4%;
+    transition: 0.3s;
+    width: 500px;
+    height: 500px;
+    align-items: center;
+  }
+
+
+.widgetcardwrap .updateslist:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.8);
+}
+
+.updateslist h2 {
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Mulish', sans-serif;
+}
+
+
+.widgetcardwrap .updateslist .updates {
+    background-color: #00666628;
+    font-family: "Mulish", sans-serif;
+    margin: 30px;
+    border-radius: 10px;
+    width: 440px; /* fixed space issue: remove space before 'px' */
+    height: 50px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hover effect: bounce and color shift */
+.widgetcardwrap .updateslist .updates:hover {
+    transform: translateY(-5px) scale(1.02); /* subtle bounce */
+    background-color: #00999928; /* slightly lighter color */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+
+.widgetcardwrap .updateslist .updates p {
+    font-family: "Mulish";
+    text-size: 30px;
+    color: #373740;
+
+  }
+
+/*Modal working details*/
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 700px;
+  height: 900px;
+  max-width: 80%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+/*game*/
+
+.start-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #EEEAE3;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #006666;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+#start-button {
+  padding: 10px 20px;
+  font-family: "Mulish", sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: #006666;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+#start-button:hover {
+  background: #00a3a3;
+}
+
+.game-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content:center;
+}
+
+.game-buttons button {
+    padding: 50px 60px;
+    font-family: "Mulish", sans-serif;
+    font-size: 20px;
+    border: 2px solid #006666;
+    background-color: #EEEAE3;
+    color: #006666;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.game-buttons button:hover {
+    background-color: #BDA99F;
+    color: white;
+}
+
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+
+
+
+/* SECTION 3: Skills */
+.skills-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+  }
+  
+  .skills-section .text h2 {
+    text-align: center;
+    font-size: 35px;
+    font-family: "Mulish";
+  }
+  
+  .skills-section .text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+.card-wrapper {
+    display: flex;
+    justify-content: center;   
+    gap: 100px;               
+    flex-wrap: wrap;           
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+ 
+
+.card-wrapper .card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 400px;
+    align-items: center;
+  }
+
+  .card-wrapper .card .container {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-wrapper .card .container img {
+    width: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card-wrapper .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+
+@media(max-width: 900px){
+    /*Section 1: Hero*/
+    .hero-section .text h2{
+        font-size: 35px;
+    }
+}
+
+@media(max-width: 750){
+    /*Section 1: Hero*/
+    .hero-section .text h2{
+        font-size: 35px;
+    }
+}
+
+
+@media(max-width: 600px){
+
+    /*NAVBAR FOR SMALLL SCREEN WIDTH*/
+    nav {
+        padding: 0 20px;
+    }
+
+    nav .right a {
+        font-size: 22px;
+    }
+    nav .right a span {
+        display: none;
+    }
+
+    nav .right a:last-child {
+        color: var(--text-color);
+        background-color: var(--background-color);
+        padding:0;
+    }
+
+
+    /*ABOUT PAGE*/
+
+        .year-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px 0 20px;
+    }
+
+    .year-buttons button {
+      padding: 10px 20px;
+      font-family: "Mulish", sans-serif;
+      font-size: 20px;
+      border: 2px solid #006666;
+      background-color: #EEEAE3;
+      color: #006666;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .year-buttons button:hover {
+      background-color: #BDA99F;
+      color: white;
+    }
+
+    .update-year-section {
+      display: none;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 0 50px;
+    }
+
+    .update-year-section.active {
+      display: flex;
+    }
+
+    .updateslist {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .updateslist h2 {
+      text-align: center;
+      font-size: 35px;
+      font-family: "Mulish";
+    }
+
+    .updateslist .updates {
+      background-color: #00666628;
+      font-family: "Mulish", sans-serif;
+      margin: 15px auto;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 900px;
+      height: auto;
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .updateslist .updates:hover {
+      transform: translateY(-5px) scale(1.02);
+      background-color: #00999928;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .updateslist .updates p {
+      font-size: 20px;
+      color: #373740;
+      margin: 0;
+    }
